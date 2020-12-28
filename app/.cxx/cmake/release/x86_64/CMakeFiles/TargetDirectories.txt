@@ -1,3 +1,0 @@
-/Users/mfhj-dz-001-210/AndroidStudio/JNITest/app/.cxx/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
-/Users/mfhj-dz-001-210/AndroidStudio/JNITest/app/.cxx/cmake/release/x86_64/CMakeFiles/edit_cache.dir
-/Users/mfhj-dz-001-210/AndroidStudio/JNITest/app/.cxx/cmake/release/x86_64/CMakeFiles/native-lib.dir
