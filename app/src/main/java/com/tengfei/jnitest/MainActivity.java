@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
 //        tv.setText(stringFromJNI());
-        tv.setText(stringFromJNITest());
+        tv.setText(stringFromJNI()+"   time:"+getTime(100)+"   age:"+getAge(30));
     }
 
     /**
@@ -28,5 +28,6 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
-    public native String stringFromJNITest();
+    public native int getTime(int time);
+    public native int getAge(int age);
 }
