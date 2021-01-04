@@ -723,18 +723,19 @@ TOUCH *touch_create(int min_thr_num, int max_thr_num, int queue_max_size, int pa
     
     threadpool_free(pool);      /*前面代码调用失败时，释放poll存储空间*/
 
-    return NULL;
+
+  return NULL;
 }
 
 int touch_readd_task(TOUCH *pool, TASK ** task_list, int task_num)
 {
 
-	TASK * item=NULL;
+  TASK * item=NULL;
 
-	int i=0;
-	int j=0;
+  int i=0;
+  int j=0;
 
-    /*添加任务到任务队列里*/
+  /*添加任务到任务队列里*/
 
     if(pool->queue_size +task_num > pool->queue_max_size)
     {
@@ -1378,6 +1379,8 @@ int touch_global_track(char *distinctId, int isLoginId, char *eventCode, char *p
     }
 
     ret=touch_track(touch, distinctId, isLoginId, eventCode, properties);
+
+    print_log(_FL_, "touch_global_track_success \n", (unsigned int)pthread_self());
 
     return ret;
 }
