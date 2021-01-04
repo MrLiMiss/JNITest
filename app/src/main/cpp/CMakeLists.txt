@@ -25,6 +25,7 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         native-lib.cpp
         touch.c
+        cJSON
         myTest.cpp
         )
 
