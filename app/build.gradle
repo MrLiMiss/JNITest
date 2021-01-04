@@ -19,6 +19,11 @@ android {
                 cppFlags ""
                 abiFilters "armeabi-v7a","arm64-v8a"
             }
+
+            ndk {
+                ldLibs "log"//实现__android_log_print
+            }
+
         }
     }
 

@@ -57,11 +57,13 @@ int print_log(char *file_name, int line, char *_fmt, ... )
     time_buf[strftime(time_buf, sizeof(time_buf), "%H:%M:%S", newtime)] = '\0';
 
     printf("FILE:[%s]LINE[%d]TIME[%s][%s]\n", file_name, line, time_buf, msg );
-    LOGE("FILE:",*file_name);
-    LOGE("line:",line);
-    LOGE("time_buf:",time_buf);
-    LOGE("msg:",msg);
-    LOGE("---------------------------------------");
+
+    LOGD("FILE:[%s]LINE[%d]TIME[%s][%s]\n", file_name, line, time_buf, msg);
+//    LOGE("FILE:",*file_name);
+//    LOGE("line:",line);
+//    LOGE("time_buf:",time_buf);
+//    LOGE("msg:",msg);
+//    LOGE("---------------------------------------");
 
     return 0;
 }
