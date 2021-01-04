@@ -7,7 +7,7 @@
 // 引入log头文件
 #include  <android/log.h>
 // log标签
-#define  TAG    "这里填写日志的TAG"
+#define  TAG    "native-lib"
 // 定义info信息
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,TAG,__VA_ARGS__)
 // 定义debug信息

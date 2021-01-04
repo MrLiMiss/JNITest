@@ -14,6 +14,18 @@
 #include "cJSON.h"
 #include "touch.h"
 
+
+// 引入log头文件
+#include  <android/log.h>
+// log标签
+#define  TAG    "touch.c"
+// 定义info信息
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,TAG,__VA_ARGS__)
+// 定义debug信息
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
+// 定义error信息
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,TAG,__VA_ARGS__)
+
 TOUCH * g_touch=NULL;
 
 int g_touch_print_flag=0;  /*1-打印,  0-不打印日志*/
@@ -45,6 +57,11 @@ int print_log(char *file_name, int line, char *_fmt, ... )
     time_buf[strftime(time_buf, sizeof(time_buf), "%H:%M:%S", newtime)] = '\0';
 
     printf("FILE:[%s]LINE[%d]TIME[%s][%s]\n", file_name, line, time_buf, msg );
+    LOGE("FILE:",*file_name);
+    LOGE("line:",line);
+    LOGE("time_buf:",time_buf);
+    LOGE("msg:",msg);
+    LOGE("---------------------------------------");
 
     return 0;
 }
